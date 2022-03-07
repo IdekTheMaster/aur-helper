@@ -3,7 +3,7 @@
 -------------
 installation:
 -------------
-$ git clone https://github.com/drquadriple/quar
+$ git clone https://github.com/idekthemaster/aur-helper
 
 $ cd quar
 
