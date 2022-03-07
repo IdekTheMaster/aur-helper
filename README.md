@@ -5,15 +5,15 @@ installation:
 -------------
 $ git clone https://github.com/idekthemaster/aur-helper
 
-$ cd quar
+$ cd aur-helper
 
-$ chmod +x quar/quar_install.sh quar/quar_remove.sh
+$ chmod +x install.sh
+
+$ ./install.sh
 
 -----------
 how to use:
 -----------
-$ cd quar
+$ cario -S to install
 
-$ ./quar -S to install
-
-$ ./quar -R to remove
+$ cario -R to remove
