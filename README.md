@@ -1,5 +1,6 @@
 # aur-helper
 
+A really minimal Aur helper written in bash
 -------------
 installation:
 -------------
