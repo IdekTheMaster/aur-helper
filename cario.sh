@@ -2,21 +2,9 @@
 while getopts S:R: options; do
         case $options in
                 S) x=$OPTARG
-                if [[ -d ~/.cache/cario/ ]]; then
-                cd ~/.cache/cario/
-                if [[ -d ~/.cache/cario/${x} ]]; then 
-                rm -rf ~/.cache/cario/${x}
-                fi
                 git clone https://aur.archlinux.org/${x}
-                cd ~/.cache/cario/${x}
+                cd ${x}
                 makepkg -si
-                else
-                mkdir ~/.cache/cario/
-                cd ~/.cache/cario/
-                git clone https://aur.archlinux.org/${x}
-                cd ~/.cache/cario/${x}
-                makepkg -si
-                fi
                 echo "Install Complete"
                 ;;
                 #removal
