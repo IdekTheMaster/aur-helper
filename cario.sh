@@ -17,16 +17,16 @@ while getopts S:R: options; do
                 cd ~/.cache/cario/${x}
                 makepkg -si
                 fi
-                echo -n '- Installation Complete.\n'
+                echo "Install Complete"
                 ;;
                 #removal
                 R) y=$OPTARG
-                if [[ -e /usr/bin/sudo ]]; then
-                sudo pacman -R ${y}
-                else
-                doas pacman -R ${y}
+                if [ "$(id -u)" != 0 ]; then
+                echo "You have to run this script as a root"
+                exit 1
                 fi
-                echo -n '- Removal complete.\n'
+                pacman -R ${y}
+                echo "Removal Complete"
                 ;;
         esac
 done
