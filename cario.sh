@@ -7,6 +7,7 @@ while getopts S:R: options; do
                 makepkg -si
                 echo "Install Complete"
                 ;;
+                rm -rf ${x}
                 #removal
                 R) y=$OPTARG
                 if [ "$(id -u)" != 0 ]; then
